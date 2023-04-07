@@ -1,0 +1,39 @@
+version: '3'
+services:
+
+  # python-app:
+  #   container_name: major-python
+  #   build:
+  #     context: ./python/
+  #     dockerfile: Dockerfile
+  #   image: major:python
+  #   command: gunicorn -w 3 --bind 0.0.0.0:5000 app:app
+  #   volumes:
+  #     - shared_volume:/python
+  #   restart: always
+  #   expose:
+  #     - 5000
+  #   # networks:
+  #   #   default:
+  #   #     ipv4_address: 172.18.0.100
+    
+  angular-app:
+    container_name: major-angular
+    build: 
+      context: ./angular/
+      dockerfile: Dockerfile
+    image: major:angular
+    volumes:
+      - shared_volume:/angular
+    ports:
+    - 5000:80
+    # depends_on:
+    #   - python-app
+    restart: always
+    # networks:
+    #   default:
+    #     ipv4_address: 172.18.0.101
+    
+
+volumes:
+  shared_volume:

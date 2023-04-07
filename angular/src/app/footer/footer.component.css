@@ -1,0 +1,21 @@
+.footer {
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 2.5%;
+  font-size: 2rem;
+  font-family: "Press Start 2P", cursive;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.author-name {
+  font-size: 2rem;
+  font-family: "Rock Salt", cursive;
+  color: white;
+  text-decoration: none;
+}
+/* font-family: 'Press Start 2P', cursive;
+font-family: 'Rock Salt', cursive; */
