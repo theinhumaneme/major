@@ -1,7 +1,142 @@
-<span style="text-align: center;">hello world</span>
-<div>
-    <form action="post ">
+<div class="form-app">
+    <form [formGroup]="postForm" (ngSubmit)="onSubmit()">
         <div>
+            <mat-form-field appearance="outline" style="width: 100%;">
+                <mat-label>Choose Model</mat-label>
+                <mat-select>
+                  <mat-option *ngFor="let model of models" [value]="model.model">
+                    {{model.viewValue}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
         </div>
+        <div>
+            <mat-form-field appearance="outline" style="width: 100%;">
+                <mat-label>Baseline Value</mat-label>
+                <input type="text" formControlName="baseline_value" id="baseline_value" required matInput>
+            </mat-form-field>
+        </div>
+
+        <div>
+            <mat-form-field appearance="outline" style="width: 100%;">
+                <mat-label>Accelerations</mat-label>
+                <input type="text" formControlName="accelerations" id="accelerations" matInput>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="outline" style="width: 100%;">
+                <mat-label>Fetal_movement</mat-label>
+                <input type="text" formControlName="fetal_movement" id="fetal_movement" matInput>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="outline" style="width: 100%;">
+                <mat-label>uterine_contractions</mat-label>
+                <input type="text" formControlName="uterine_contractions" id="uterine_contractions" matInput>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="outline" style="width: 100%;">
+                <mat-label>light_decelerations</mat-label>
+                <input type="text" formControlName="light_decelerations" id="light_decelerations" matInput>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="outline" style="width: 100%;">
+                <mat-label>severe_decelerations</mat-label>
+                <input type="text" formControlName="severe_decelerations" id="severe_decelerations" matInput>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="outline" style="width: 100%;">
+                <mat-label>prolongued_decelerations</mat-label>
+                <input type="text" formControlName="prolongued_decelerations" id="prolongued_decelerations" matInput>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="outline" style="width: 100%;">
+                <mat-label>abnormal_short_term_variability</mat-label>
+                <input type="text" formControlName="abnormal_short_term_variability" id="abnormal_short_term_variability" matInput>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="outline" style="width: 100%;">
+                <mat-label>mean_value_of_short_term_variability</mat-label>
+                <input type="text" formControlName="mean_value_of_short_term_variability" id="mean_value_of_short_term_variability" matInput>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="outline" style="width: 100%;">
+                <mat-label>percentage_of_time_with_abnormal_long_term_variability</mat-label>
+                <input type="text" formControlName="percentage_of_time_with_abnormal_long_term_variability" id="percentage_of_time_with_abnormal_long_term_variability" matInput>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="outline" style="width: 100%;">
+                <mat-label>mean_value_of_long_term_variability</mat-label>
+                <input type="text" formControlName="mean_value_of_long_term_variability" id="mean_value_of_long_term_variability" matInput>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="outline" style="width: 100%;">
+                <mat-label>histogram_width</mat-label>
+                <input type="text" formControlName="histogram_width" id="histogram_width" matInput>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="outline" style="width: 100%;">
+                <mat-label>histogram_min</mat-label>
+                <input type="text" formControlName="histogram_min" id="histogram_min" matInput>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="outline" style="width: 100%;">
+                <mat-label>histogram_max</mat-label>
+                <input type="text" formControlName="histogram_max" id="histogram_max" matInput>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="outline" style="width: 100%;">
+                <mat-label>histogram_number_of_peaks</mat-label>
+                <input type="text" formControlName="histogram_number_of_peaks" id="histogram_number_of_peaks" matInput>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="outline" style="width: 100%;">
+                <mat-label>histogram_number_of_zeroes</mat-label>
+                <input type="text" formControlName="histogram_number_of_zeroes" id="histogram_number_of_zeroes" matInput>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="outline" style="width: 100%;">
+                <mat-label>histogram_mode</mat-label>
+                <input type="text" formControlName="histogram_mode" id="histogram_mode" matInput>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="outline" style="width: 100%;">
+                <mat-label>histogram_mean</mat-label>
+                <input type="text" formControlName="histogram_mean" id="histogram_mean" matInput>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="outline" style="width: 100%;">
+                <mat-label>histogram_median</mat-label>
+                <input type="text" formControlName="histogram_median" id="histogram_median" matInput>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="outline" style="width: 100%;">
+                <mat-label>histogram_variance</mat-label>
+                <input type="text" formControlName="histogram_variance" id="histogram_variance" matInput>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="outline" style="width: 100%;">
+                <mat-label>histogram_tendency</mat-label>
+                <input type="text" formControlName="histogram_tendency" id="histogram_tendency" matInput>
+            </mat-form-field>
+        </div>
+        
     </form>
 </div>

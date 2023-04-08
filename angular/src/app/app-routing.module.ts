@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
-import { TestComponent } from './test/test.component';
 import { FormComponent } from './form/form.component';
 import { HomeComponent } from './home/home.component';
+import { CsvComponent } from './csv/csv.component';
 
 const routes: Routes = [
   {
@@ -21,7 +21,7 @@ const routes: Routes = [
   },
   {
     path: 'blitz',
-    component: TestComponent,
+    component: CsvComponent,
   },
 ];
 

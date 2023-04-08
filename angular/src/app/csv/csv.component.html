@@ -1,0 +1,16 @@
+<div>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>Choose Model</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let model of models" [value]="model.model">
+            {{model.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+</div>
+<div>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>Baseline Value</mat-label>
+        <input type="text" formControlName="baseline_value" id="baseline_value" required matInput>
+    </mat-form-field>
+</div>

@@ -12,13 +12,13 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { HomeComponent } from './home/home.component';
-import { TestComponent } from './test/test.component';
 import { FormComponent } from './form/form.component';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatInputModule } from '@angular/material/input';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CsvComponent } from './csv/csv.component';
 
 @NgModule({
   declarations: [
@@ -26,8 +26,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    TestComponent,
     FormComponent,
+    CsvComponent,
   ],
   imports: [
     MatToolbarModule,
