@@ -1,0 +1,7 @@
+{
+    "/api/*": {
+        "target": "http://major-python:5000/opt",
+        "secure": false,
+        "logLevel": "info"
+    }
+}

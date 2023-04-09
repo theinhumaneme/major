@@ -19,6 +19,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CsvComponent } from './csv/csv.component';
+import { ModelService } from './model.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -43,8 +45,9 @@ import { CsvComponent } from './csv/csv.component';
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ ModelService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

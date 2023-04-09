@@ -1,4 +1,1 @@
-sudo apt install python3.10-venv
-python3 -m venv venv
-source ./venv/bin/activate
-pip3 install -r ./requirements.txt
+docker network create --subnet=10.5.0.0/16 mynet

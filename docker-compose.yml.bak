@@ -2,12 +2,11 @@ version: '3'
 services:
 
   python-app:
-    container_name: major-python
+    # container_name: major-python
     build:
       context: ./python/
       dockerfile: Dockerfile
-    # image: theinhumaneme/images:major-python
-    image: theinhumaneme/major:python
+    image: major:python
     command: gunicorn -w 3 --bind 0.0.0.0:5000 app:app
     # volumes:
     #   - shared_volume:/python
@@ -16,18 +15,16 @@ services:
     #   - 5000
     ports:
       - 4000:5000
-    # networks:
     networks:
-      network:
-        ipv4_address: 10.5.0.4
+      default:
+        ipv4_address: 172.18.0.112
     
   angular-app:
-    container_name: major-angular
+    # container_name: major-angular
     build: 
       context: ./angular/
       dockerfile: Dockerfile
-    # image: theinhumaneme/images:major-angular
-    image: theinhumaneme/major:angular
+    image: major:angular
     # volumes:
     #   - shared_volume:/angular
     ports:
@@ -36,17 +33,14 @@ services:
       - python-app
     restart: always
     networks:
-      network:
-        ipv4_address: 10.5.0.5
+      default:
+        ipv4_address: 172.18.0.111
     
 
 # volumes:
 #   shared_volume:
 
 networks:
-  network:
-    driver: bridge
-    ipam:
-      config:
-        - subnet: 10.5.0.0/16
-          gateway: 10.5.0.1
+  default:
+    external:
+      name: cloudflare

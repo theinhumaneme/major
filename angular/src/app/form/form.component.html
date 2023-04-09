@@ -1,9 +1,20 @@
+<div>
+    <div *ngIf="response ==1" class="safe box">
+      The fetus is healthy
+    </div>
+    <div *ngIf="response ==2" class="pathological box">
+      The fetus needs immediate attention
+    </div>
+    <div *ngIf="response ==3" class="critical box">
+      The fetus state is pathalogical
+    </div>
+  </div>
 <div class="form-app">
     <form [formGroup]="postForm" (ngSubmit)="onSubmit()">
         <div>
             <mat-form-field appearance="outline" style="width: 100%;">
                 <mat-label>Choose Model</mat-label>
-                <mat-select>
+                <mat-select formControlName="selected_model" id="selected_model">
                   <mat-option *ngFor="let model of models" [value]="model.model">
                     {{model.viewValue}}
                   </mat-option>
@@ -137,6 +148,9 @@
                 <input type="text" formControlName="histogram_tendency" id="histogram_tendency" matInput>
             </mat-form-field>
         </div>
+        <button mat-raised-button color="primary" class="button" type="submit" [disabled]="!postForm.valid" >
+            Save
+        </button>
         
     </form>
 </div>
