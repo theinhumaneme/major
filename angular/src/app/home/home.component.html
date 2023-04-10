@@ -1,22 +1,40 @@
-<div class="home">
-    <div class="title-image">
-        <h1 class="brand-name">Fetal Health Classification Using AI&ML</h1>
-        <p class="title-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio eveniet, natus sequi ea
-            laudantium saepe velit voluptates incidunt aliquam adipisci iure, quod, odit alias error impedit
-            perspiciatis quia repellendus nihil!</p>
-    </div>
-    <div class="title">
-        <h1 class="section-name">About</h1>
-        <p class="section-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio eveniet, natus sequi ea
-            laudantium saepe velit voluptates incidunt aliquam adipisci iure, quod, odit alias error impedit
-            perspiciatis quia repellendus nihil!</p>
-    </div>
-    <div class="title">
-        <h1 class="section-name">Predict</h1>
-        <p class="section-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio eveniet, natus sequi ea
-            laudantium saepe velit voluptates incidunt aliquam adipisci iure, quod, odit alias error impedit
-            perspiciatis quia repellendus nihil!</p>
-        <button mat-button routerLink="blitz">CSV</button>
-        <button mat-button routerLink="predict">Feed</button>
-    </div>
+<div class="title-image">
+    <h1 class="brand-name">Fetal Health Classification Using AI&ML</h1>
+    <p class="title-content">Our approach utilizes CTG scan data as the primary source for training our model,
+        enabling us to develop a highly accurate and effective fetal health classification system that can provide
+        valuable insights and diagnoses for healthcare professionals, all while providing an intuitive and
+        user-friendly front-end interface for seamless interaction.</p>
+</div>
+<div class="about-image">
+    <h1 class="section-name">About</h1>
+    <p class="section-content">Our project is at the forefront of revolutionizing fetal health classification,
+        leveraging machine learning and artificial intelligence to provide highly accurate and efficient diagnoses. We
+        train our model using CTG scan data and employ a rigorous evaluation process to ensure maximum reliability. With
+        an intuitive front-end interface, our system delivers crucial insights for healthcare professionals and empowers
+        patients with valuable information.</p>
+</div>
+<div class="predict-image">
+    <h1 class="section-name">Predict</h1>
+    <p class="section-content" style="padding-bottom: 0.5rem !important">In our prediction selection, we used multiple
+        models and advanced techniques to
+        select the most effective and accurate model for fetal health classification, ensuring the highest level of
+        reliability and confidence in our system's diagnoses.</p>
+    <ul style="list-style-type: none;padding-top: 1rem !important;">
+        <li class="section-content" style=" font-size: 1.75rem !important;padding: 0.5rem !important">Linear Regression
+        </li>
+        <li class="section-content" style=" font-size: 1.75rem !important;padding: 0.5rem !important">Gradient Boosting
+            Classifier</li>
+        <li class="section-content" style=" font-size: 1.75rem !important;padding: 0.5rem !important">K Nearest
+            Neighbours</li>
+        <li class="section-content" style=" font-size: 1.75rem !important;padding: 0.5rem !important">Random Forest
+            Classifier</li>
+        <li class="section-content" style=" font-size: 1.75rem !important;padding: 0.5rem !important">Support Vector
+            Machine</li>
+        <li class="section-content" style=" font-size: 1.75rem !important;padding: 0.5rem !important">Decision Tree
+            Classifier</li>
+    </ul>
+    <button mat-raised-button color="primary" style="padding: 1rem 2rem; font-size: 2rem; margin: 2rem;"
+        routerLink="blitz">CSV Values</button>
+    <button mat-raised-button color="secondary" style="padding: 1rem 2rem; font-size: 2rem; margin: 2rem;"
+        routerLink="predict">Manual Input</button>
 </div>
