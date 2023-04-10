@@ -1,0 +1,59 @@
+.title-image{
+    background-image: url("./bak.png");
+    background-size: cover;
+    /* padding: 30%; */
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+}
+.brand-name{
+    font-size: 5rem;
+    color: black;
+    /* color: white !important; */
+    text-align: center;
+    padding-top:6rem;
+    padding-bottom: 6rem;
+    font-family: 'Rock Salt', cursive;
+    line-height: 2;
+    text-transform: capitalize;
+}
+.section-name{
+    font-size: 4rem;
+    color: black;
+    /* color: white !important; */
+    text-align: center;
+    padding-top:2rem;
+    padding-bottom: 1rem;
+    font-family: 'Rock Salt', cursive;
+    line-height: 2;
+    text-transform: capitalize;
+}
+.section-content{
+    font-size: 2rem;
+    color: black;
+    /* color: white !important; */
+    text-align: center;
+    padding: 3% 3%;
+    text-align: justify;
+
+    margin: 0%;
+    /* font-family: 'Rock Salt', cursive; */
+    line-height: 2;
+    text-transform: capitalize;
+}
+.title-content{
+    font-size: 3rem;
+    color: black;
+    /* color: white !important; */
+    text-align: center;
+    padding-top:6rem;
+    padding-bottom: 6rem;
+    margin: 0%;
+    /* font-family: 'Rock Salt', cursive; */
+    line-height: 2;
+    text-transform: capitalize;
+}
+.home{
+    padding-bottom: 20%;
+}

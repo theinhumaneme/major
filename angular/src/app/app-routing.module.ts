@@ -8,11 +8,6 @@ import { CsvComponent } from './csv/csv.component';
 const routes: Routes = [
   {
     path: '',
-    pathMatch: 'full',
-    redirectTo: 'app',
-  },
-  {
-    path: 'app',
     component: HomeComponent,
   },
   {
