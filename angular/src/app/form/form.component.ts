@@ -16,8 +16,12 @@ export class FormComponent implements OnInit {
   postForm: FormGroup;
   response: any;
   models: Model[] = [
+    // {
+    //   model: 'GradientBoostingClassifierModelHyperTuned',
+    //   viewValue: 'Optimal Model',
+    // },
     {
-      model: 'GradientBoostingClassifierModelHyperTuned',
+      model: 'GradientBoostingClassifierModel',
       viewValue: 'Optimal Model',
     },
     { model: 'LinearRegressionModel', viewValue: 'Linear Regression' },
@@ -33,6 +37,10 @@ export class FormComponent implements OnInit {
     {
       model: 'RandomForestClassifierModel',
       viewValue: 'Random Forest Classifer',
+    },
+    {
+      model: 'RandomForestClassifierModelHyperTuned',
+      viewValue: 'Random Forest Classifer Hyper Tuned',
     },
     { model: 'SVCModel', viewValue: 'Support Vector Machine' },
   ];

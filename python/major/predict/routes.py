@@ -20,14 +20,3 @@ def optimal_result():
     result = np.array(result).tolist()
     print(result)
     return jsonify(result)
-
-
-# @predict.route('/predict',methods=['POST'])
-# def predict_result():
-#     warnings.filterwarnings("ignore")
-#     print(request.get_json().get("model"))
-#     # loaded_model = joblib.load('/home/kalyan/Documents/GitHub/major/python/major/predict/GradientBoostingClassifierModelHyperTuned.sav')
-#      loaded_model = joblib.load('/major/predict/GradientBoostingClassifierModelHyperTuned.sav')
-#     result = loaded_model.predict([request.get_json().get("values")])
-#     result = np.array(result).tolist()
-#     return result

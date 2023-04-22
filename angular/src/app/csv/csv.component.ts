@@ -17,10 +17,15 @@ export class CsvComponent implements OnInit {
   blitz: FormGroup;
   response: any;
   models: Model[] = [
+    // {
+    //   model: 'GradientBoostingClassifierModelHyperTuned',
+    //   viewValue: 'Optimal Model',
+    // },
     {
-      model: 'GradientBoostingClassifierModelHyperTuned',
+      model: 'GradientBoostingClassifierModel',
       viewValue: 'Optimal Model',
     },
+
     { model: 'LinearRegressionModel', viewValue: 'Linear Regression' },
     {
       model: 'DecisionTreeClassifierModel',
@@ -34,6 +39,10 @@ export class CsvComponent implements OnInit {
     {
       model: 'RandomForestClassifierModel',
       viewValue: 'Random Forest Classifer',
+    },
+    {
+      model: 'RandomForestClassifierModelHyperTuned',
+      viewValue: 'Random Forest Classifer Hyper Tuned',
     },
     { model: 'SVCModel', viewValue: 'Support Vector Machine' },
   ];
@@ -61,8 +70,10 @@ export class CsvComponent implements OnInit {
     for (var i = 0; i < res.length; i++) {
       vals.push(parseFloat(res[i]));
     }
-    this.modelService.pred_model_array(vals, this.blitz.value['selected_model']).subscribe((resp) => {
-      this.response = resp;
-    });
+    this.modelService
+      .pred_model_array(vals, this.blitz.value['selected_model'])
+      .subscribe((resp) => {
+        this.response = resp;
+      });
   }
 }
