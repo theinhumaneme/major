@@ -3,10 +3,9 @@ services:
 
   python-app:
     container_name: major-python
-#     build:
-#       context: ./python/
-#       dockerfile: Dockerfile
-    # image: theinhumaneme/images:major-python
+    build:
+      context: ./python/
+      dockerfile: Dockerfile
     image: theinhumaneme/major:python
     command: gunicorn -w 3 --bind 0.0.0.0:5000 app:app
     # volumes:
@@ -23,10 +22,9 @@ services:
     
   angular-app:
     container_name: major-angular
-#     build: 
-#       context: ./angular/
-#       dockerfile: Dockerfile
-    # image: theinhumaneme/images:major-angular
+    build: 
+      context: ./angular/
+      dockerfile: Dockerfile
     image: theinhumaneme/major:angular
     # volumes:
     #   - shared_volume:/angular

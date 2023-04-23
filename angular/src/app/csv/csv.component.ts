@@ -22,7 +22,7 @@ export class CsvComponent implements OnInit {
     //   viewValue: 'Optimal Model',
     // },
     {
-      model: 'GradientBoostingClassifierModel',
+      model: 'RandomForestClassifierModelHyperTuned',
       viewValue: 'Optimal Model',
     },
 

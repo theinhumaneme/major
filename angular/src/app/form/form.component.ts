@@ -21,7 +21,7 @@ export class FormComponent implements OnInit {
     //   viewValue: 'Optimal Model',
     // },
     {
-      model: 'GradientBoostingClassifierModel',
+      model: 'RandomForestClassifierModelHyperTuned',
       viewValue: 'Optimal Model',
     },
     { model: 'LinearRegressionModel', viewValue: 'Linear Regression' },
