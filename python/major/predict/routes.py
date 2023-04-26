@@ -7,6 +7,7 @@ import numpy as np
 predict = Blueprint('predict',__name__)
 
 @predict.route('/opt',methods=['POST'])
+@cross_origin()
 def optimal_result():
     warnings.filterwarnings("ignore")
     print(request.get_json().get("model"))
