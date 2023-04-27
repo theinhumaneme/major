@@ -14,7 +14,6 @@ def optimal_result():
     model = request.get_json().get("model")
     # for local testing
     # loaded_model = joblib.load(f'/home/kalyan/Documents/GitHub/major/python/major/predict/{model}.sav')
-
     # line for docker container
     loaded_model = joblib.load(f'/major/predict/{model}.sav')
     result = loaded_model.predict([request.get_json().get("values")])
